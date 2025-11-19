@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Expo Saudi 2030</title>
+
+
+
+
+ 
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=El+Messiri:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css" />
+   
+   
+
+
+
+
+</head>
+<body>
+
+
+
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Expo Saudi 2030 Logo"></a>
+            <nav class="main-nav">
+                <a href="index.html">HOME</a>
+                <a href="experience.html">EXPERIENCE</a>
+                <a href="explorer.html">EXPLORER</a>
+                <a href="pavilion.html" >MY PAVILION</a>
+                <a href="about.html" class="is-active">ABOUT US</a>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main class="page-content">
+        <div class="content-card">
+            <nav class="leen-breadcrumbs">
+                <a href="index.html">HOME</a> <span>›</span>
+                <a href="about.html">ABOUT US</a> <span>›</span>
+                <span>FORM</span>
+            </nav>
+
+
+
+
+            <h2 class="leen-title">JOIN US FORM</h2>
+
+
+
+
+            <form id="join-form" class="leen-form leen-form-grid" action="#" method="post" enctype="multipart/form-data">
+
+
+
+
+                <div class="leen-field leen-half" id="field-name">
+                    <label for="leen-name">Full Name</label>
+                    <input
+                        id="leen-name"
+                        name="name"
+                        type="text"
+                        placeholder="Enter full name"
+                        required
+                        pattern="[^0-9].*"
+                        title="Name cannot start with a number (e.g., must start with a letter)."
+                    >
+                    <small class="error-message" id="error-name">Name cannot start with a number.</small>
+                </div>
+
+
+
+
+                <div class="leen-field" id="field-gender">
+                    <label for="leen-gender">Gender</label>
+                    <select id="leen-gender" name="gender" required>
+                        <option value="">Select…</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                    </select>
+                    <small class="error-message" id="error-gender">Please select a gender.</small>
+                </div>
+
+
+
+
+                <div class="leen-field leen-half" id="field-dob">
+                    <label for="leen-dob">Date of Birth</label>
+                    <input id="leen-dob" name="dob" type="date" required max="2008-12-31">
+                    <small class="error-message" id="error-dob">DOB is only avalible for people born before 2009.</small>
+                </div>
+
+
+
+
+                <div class="leen-field leen-span-2" id="field-email">
+                    <label for="leen-email">Email</label>
+                    <input id="leen-email" name="email" type="email" placeholder="name@example.com" required>
+                    <small class="error-message" id="error-email">Email is required.</small>
+                </div>
+               
+
+
+                <div class="leen-field leen-span-2" id="field-edu">
+                    <label for="leen-edu">Education</label>
+                   
+                    <textarea id="leen-edu" name="education" rows="3" placeholder="Degree, University, Year" required></textarea>
+                    <small class="error-message" id="error-edu">Education details are required.</small>
+                </div>
+
+
+
+
+                <div class="leen-field" id="field-skills">
+                    <label for="leen-skills">Skills</label>
+                   
+                    <textarea id="leen-skills" name="skills" rows="3" placeholder="e.g., Public speaking, Team leading" required></textarea>
+                    <small class="error-message" id="error-skills">Skills are required.</small>
+                </div>
+
+
+
+
+                <div class="leen-field" id="field-exp">
+                    <label for="leen-exp">Area of Expertise</label>
+                   
+                    <textarea id="leen-exp" name="experience" rows="3" placeholder="Summary of past roles" required></textarea>
+                    <small class="error-message" id="error-exp">Area of expertise is required</small>
+                </div>
+               
+                <div class="leen-field leen-span-2" id="field-message">
+                    <label for="leen-message">General Message</label>
+                 
+                    <textarea id="leen-message" name="message" rows="4" placeholder="Tell us why you want to join our team..." required></textarea>
+                    <small class="error-message" id="error-message">Message is required.</small>
+                </div>
+               
+                <div class="leen-field leen-upload leen-span-2" id="field-photo">
+                    <label for="leen-photo">Upload Photo</label>
+                    <div class="leen-upload-box">
+                     
+                        <input id="leen-photo" name="photo" type="file" required accept="image/jpeg, image/png, image/jpg">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <p>Choose or drag a photo here</p>
+                    </div>
+                    <small class="leen-hint">Accepted: JPG/PNG, up to 2MB.</small>
+                    <small class="error-message" id="error-photo">Photo is required and must be a JPG or PNG image.</small>
+                </div>
+
+
+
+
+                <div class="leen-actions leen-actions-right leen-span-2">
+                    <button type="submit" class="leen-btn leen-btn-primary">SUBMIT</button>
+                    <a href="about.html" class="leen-btn">CANCEL</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+<!--Popup Alert -->
+<div class="popup-overlay" id="popupOverlay" aria-hidden="true">
+  <div class="popup-box">
+    <h2 id="popupTitle">Message</h2>
+    <p id="popupMessage"></p>
+    <button type="button" class="popup-button" id="popupOk">OK</button>
+    <button type="button" class="popup-button" id="popupCancel" style="display:none;">Cancel</button>
+  </div>
+</div>
+
+
+<footer class="main-footer">
+  <div class="footer-container">
+
+
+
+
+    <div class="social">
+      <h4>Social Media</h4>
+
+
+
+
+      <p><i class="fab fa-facebook-f"></i>
+        <a class="footer-link" href="https://www.facebook.com" target="_blank">Facebook</a>
+      </p>
+
+
+
+
+      <p><i class="fab fa-instagram"></i>
+        <a class="footer-link" href="https://www.instagram.com" target="_blank">Instagram</a>
+      </p>
+
+
+
+
+      <p><i class="fab fa-x-twitter"></i>
+        <a class="footer-link" href="https://x.com" target="_blank">X</a>
+      </p>
+    </div>
+
+
+
+
+    <div class="footer-logo">
+      <img src="assets/images/logo.png" alt="Expo Logo">
+    </div>
+
+
+
+
+    <div class="contact">
+      <h4>Contact Us</h4>
+
+
+
+
+      <p><i class="fa-solid fa-phone"></i>
+        <a class="footer-link" href="tel:+966000000000">Phone</a>
+      </p>
+
+
+
+
+      <p><i class="fa-solid fa-envelope"></i>
+        <a class="footer-link" href="mailto:info@example.com">Email</a>
+      </p>
+
+
+
+
+     
+              <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i><a class="footer-link" href="index.html#map-section">Location</a></p>
+
+
+
+
+   
+    </div>
+  </div>
+
+
+
+
+  <div class="footer-bottom">
+    © EXPO SAUDI 2025. ALL rights reserved.
+  </div>
+</footer>
+
+
+
+
+
+
+   <script>
+ 
+  const popupOverlay = document.getElementById('popupOverlay');
+  const popupTitle   = document.getElementById('popupTitle');
+  const popupMessage = document.getElementById('popupMessage');
+  const popupOk      = document.getElementById('popupOk');
+  const popupCancel  = document.getElementById('popupCancel');
+
+
+  let currentForm = null; // to reset form after popup
+
+
+  document.getElementById('join-form').addEventListener('submit', function(event) {
+    // Let browser validate
+    if (!event.target.checkValidity()) {
+      return;
+    }
+
+
+    event.preventDefault();
+
+
+    const nameInput   = document.getElementById('leen-name');
+    const senderName  = nameInput.value.trim() || "Applicant";
+
+
+    // Set popup content
+    popupTitle.textContent   = "Submission Successful!";
+    popupMessage.textContent = `Thank you for joining our team, ${senderName}! We will review your application soon.`;
+
+
+    // Show popup
+    popupOverlay.style.display = "flex";
+    popupOverlay.setAttribute("aria-hidden", "false");
+
+
+    // Remember which form to reset
+    currentForm = event.target;
+  });
+
+
+  // OK button
+  popupOk.addEventListener('click', function() {
+    popupOverlay.style.display = "none";
+    popupOverlay.setAttribute("aria-hidden", "true");
+    if (currentForm) {
+      currentForm.reset();
+      currentForm = null;
+    }
+  });
+
+
+
+
+  // Cancel button currently hidden
+  popupCancel.addEventListener('click', function() {
+    popupOverlay.style.display = "none";
+    popupOverlay.setAttribute("aria-hidden", "true");
+  });
+</script>
+<script src="script.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
