@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Expo Saudi 2030</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=El+Messiri:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<header class="main-header">
+  <div class="header-container">
+    <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Expo Saudi 2030 Logo"></a>
+    <nav class="main-nav">
+      <a href="index.html">HOME</a>
+      <a href="experience.html">EXPERIENCE</a>
+      <a href="explorer.html">EXPLORER</a>
+      <a href="pavilion.html"class="is-active">MY PAVILION</a>
+      <a href="about.html">ABOUT US</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page-content">
+  <div class="content-card">
+    <nav class="leen-breadcrumbs">
+      <a href="index.html">HOME</a> <span>&gt</span>
+      <a href="pavilion.html">MY PAVILION</a> <span>&gt</span>
+      <span>EXPO TEAM</span>
+    </nav>
+
+    <div class="leen-section-header expo-header">
+      <h2 class="leen-title">EXPO TEAM</h2>
+      <a href="add-member.html" class="leen-btn">ADD NEW</a>
+    </div>
+
+    <form id="teamForm" action="#" method="post" >
+      <div id="teamGrid" class="leen-team-layout">
+        <label class="leen-team-box">
+          <input type="checkbox" class="member-check">
+          <img src="assets/images/Danah.png" alt="Danah AlDhowaihy">
+          <span class="leen-member-name">Danah AlDhowaihy</span>
+        </label>
+        <label class="leen-team-box">
+          <input type="checkbox" class="member-check">
+          <img src="assets/images/Leen.png" alt="Leen Almuqhim">
+          <span class="leen-member-name">Leen Almuqhim</span>
+        </label>
+        <label class="leen-team-box">
+          <input type="checkbox" class="member-check">
+          <img src="assets/images/Dalal.png" alt="Dalal Alghumlas">
+          <span class="leen-member-name">Dalal Alghumlas</span>
+        </label>
+        <label class="leen-team-box">
+          <input type="checkbox" class="member-check">
+          <img src="assets/images/Alanoud.png" alt="Alanoud Alhudhaif">
+          <span class="leen-member-name">Alanoud Alhudhaif</span>
+        </label>
+        <label class="leen-team-box">
+          <input type="checkbox" class="member-check">
+          <img src="assets/images/Reem.png" alt="Reem AlMaskati">
+          <span class="leen-member-name">Reem AlMaskati</span>
+        </label>
+        <label class="leen-team-box">
+          <input type="checkbox" class="member-check">
+          <img src="assets/images/Saud.png" alt="Saud Al-Mutairi">
+          <span class="leen-member-name">Saud Al-Mutairi</span>
+        </label>
+        <label class="leen-team-box">
+          <input type="checkbox" class="member-check">
+          <img src="assets/images/Nasser.png" alt="Nasser Al-Harbi">
+          <span class="leen-member-name">Nasser Al-Harbi</span>
+        </label>
+        <label class="leen-team-box">
+          <input type="checkbox" class="member-check">
+          <img src="assets/images/Fahad.png" alt="Fahad Al-Qahtani">
+          <span class="leen-member-name">Fahad Al-Qahtani</span>
+        </label>
+      </div>
+
+      <div class="leen-actions leen-actions-right leen-span-2" style="margin-top:10px">
+        <button type="button" id="deleteMembers" class="leen-btn leen-btn-danger">DELETE</button>
+        <a href="pavilion.html" class="leen-btn">BACK</a>
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="social">
+      <h4>Social Media</h4>
+      <p><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com" target="_blank" class="footer-link">Facebook</a></p>
+      <p><i class="fab fa-instagram"></i><a href="https://www.instagram.com" target="_blank" class="footer-link">Instagram</a></p>
+      <p><i class="fab fa-x-twitter"></i><a href="https://x.com" target="_blank" class="footer-link">X</a></p>
+    </div>
+    <div class="footer-logo"><img src="assets/images/logo.png" alt="Expo Logo"></div>
+    <div class="contact">
+      <h4>Contact Us</h4>
+      <p><i class="fa-solid fa-phone"></i><a href="tel:+966000000000" class="footer-link">Phone</a></p>
+      <p><i class="fa-solid fa-envelope"></i><a href="mailto:info@example.com" class="footer-link">Email</a></p>
+      <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i><a class="footer-link" href="index.html#map-section">Location</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy;  EXPO SAUDI 2030. All rights reserved.</div>
+</footer>
+
+<script src="script.js"></script>
+<!-- Global Popup Alert / Confirm -->
+<div class="popup-overlay" id="popupOverlay" aria-hidden="true">
+  <div class="popup-box">
+    <h2 id="popupTitle">Message</h2>
+    <p id="popupMessage"></p>
+    <button type="button" class="popup-button" id="popupOk">OK</button>
+    <button type="button" class="popup-button" id="popupCancel" style="display:none;">Cancel</button>
+  </div>
+</div>
+</body>
+</html>
